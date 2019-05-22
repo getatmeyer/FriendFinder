@@ -17,9 +17,11 @@
             <h3><strong>About You</strong></h3>
             <h4>Name</h4>
             <input type="text" id="name" class="form-control" required>
+
             <h4>Link to Photo Image</h4>
             <input type="text" id="photo" class="form-control" required>
             <hr>
+
             <h3><strong>Question 1</strong></h3>
             <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
             <select class="custom-select" id="questionONE" style="width:200px;">
@@ -43,8 +45,8 @@
                 </select>
 
                 <h3><strong>Question 3</strong></h3>
-            <h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
-            <select class="custom-select" id="questionTHREE" style="width:200px;">
+                <h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
+                <select class="custom-select" id="questionTHREE" style="width:200px;">
                 <option value></option>
                 <option value="1">1 (Strongley Disagree)</option>
                 <option value="2">2</option>
@@ -122,10 +124,8 @@
                 <br>
                 <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">SUBMIT</button>
                 <hr>
-
-               
-
-
+           
+        
                 <nav class="navbar navbar-default navbar-fixed-bottom">
                         <div class="container vertical_alignment">
                                <p class="text-center"><a href="/api/friends" target="_blank">API Friends List</a> | <a href="https://github.com/getatmeyer/FriendFInder" target="_blank">GitHub Repo</a> | <a href="home.html">Home</a></p>
@@ -137,6 +137,49 @@
 
             </div>
 
+            <!-- SUBMIT BUTTON  JavaScript -->
+            <script>
 
+            // var currentURL = window.location.origin;
+
+            // Capture the form input
+            $("#submit").on("click", function() {
+                event.preventDefault();
+
+                $(".form-control").each(function() {
+
+                })
+
+                $(".custom-select").each(function() {
+
+                })
+
+                   
+                var newFriend = {
+                    name: $("#name").val().trim(),
+                    photo:$("#photo").val().trim(),
+                    score: [   
+                         $("#questionONE").val(),trim(),
+                         $("#questionTWO").val(), trim(),
+                         $("#questionTHREE").val(),trim(),
+                         $("#questionFOUR").val(), trim(),
+                         $("#questionFIVE").val(), trim(),
+                         $("#questionSIX").val(), trim(),
+                         $("#questionSEVEN").val(), trim(),
+                         $("#questionEIGHT").val(), trim(),
+                         $("#questionNINE").val(), trim(),
+                ]}
+            })
+        })
+        
+        
+                
+
+
+            
+
+         </script>
+            <script type="text/javascript" src="server.js"></script>
+            
         </body>
         </html>
