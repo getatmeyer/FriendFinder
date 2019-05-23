@@ -5,9 +5,11 @@
             <title>FriendFinder App</title>
 
             <!-- link sections -->
+            <script src="https://code.jquery.com/jquery.js"></script>
+
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-            <script src="https://code.jquery.com/jquery.js"></script>
+            <!-- <script src="https://code.jquery.com/jquery.js"></script> -->
 
     </head>
     <body>
@@ -146,40 +148,67 @@
             $("#submit").on("click", function() {
                 event.preventDefault();
 
-                $(".form-control").each(function() {
+                function validate() {
+                    var valid = true;
+                    $('.form-control').each(function() {
+                    if ($(this).val() === '')
+                valid = false;
+                    });
+                    
+            
 
-                })
+                // $(".form-control").val() === " " || $(".custom-select").val() === " " {
+                // valid = false;
 
-                $(".custom-select").each(function() {
-
-                })
-
+                // }
+                    
+     
                    
                 var newFriend = {
                     name: $("#name").val().trim(),
                     photo:$("#photo").val().trim(),
                     score: [   
-                         $("#questionONE").val(),trim(),
-                         $("#questionTWO").val(), trim(),
-                         $("#questionTHREE").val(),trim(),
-                         $("#questionFOUR").val(), trim(),
-                         $("#questionFIVE").val(), trim(),
-                         $("#questionSIX").val(), trim(),
-                         $("#questionSEVEN").val(), trim(),
-                         $("#questionEIGHT").val(), trim(),
-                         $("#questionNINE").val(), trim(),
+                         $("#questionONE").val(),
+                         $("#questionTWO").val(), 
+                         $("#questionTHREE").val(),
+                         $("#questionFOUR").val(), 
+                         $("#questionFIVE").val(), 
+                         $("#questionSIX").val(), 
+                         $("#questionSEVEN").val(), 
+                         $("#questionEIGHT").val(), 
+                         $("#questionNINE").val() 
                 ]}
-            })
-        })
-        
-        
+                console.log("NewFriend", newFriend); // PASSED
                 
 
+                // var currentURL = window.location.origin;
+   
+                $.post("/api/friends", newFriend, function (data) {
+                    console.log(newFriend);
+                    console.log(data);
+                       
 
-            
+                });
+                 
 
+                //clear form after submission
+            $('#name').val("");
+            $('#photo').val("");
+            $('#questionONE').val("");
+            $('#questionTWO').val("");
+            $('#questionTHREE').val("");
+            $('#questionFOUR').val("");
+            $('#questionFIVE').val("");
+            $('#questionSIX').val("");
+            $('#questionSEVEN').val("");
+            $('#questionEIGHT').val("");
+            $('#questionNINE').val("");
+
+            }
+        )
+        
          </script>
-            <script type="text/javascript" src="server.js"></script>
+            <!-- <script type="text/javascript" src="server.js"></script> -->
             
         </body>
         </html>
