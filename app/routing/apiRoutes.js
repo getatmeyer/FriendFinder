@@ -16,12 +16,19 @@ app.get("/api/friends", function(req,res){
     console.log("req : ", req.body);
     // console.log("res: " + res);
     
+    // compare scores
+    var totalDifference = 0;
+
     //data to display the best match
     var bestFriends = {
       name: "",
       photo: "",
       friendDifference: 100
     };
+
+    
+
+
 
 
     // parse array into integers

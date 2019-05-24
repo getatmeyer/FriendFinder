@@ -154,16 +154,19 @@
                     if ($(this).val() === '')
                 valid = false;
                     });
-                    
-            
+                    $('.custom-select').each(function() {
+                    if ($(this).val() === '')
+                    valid = false;
+                        console.log(validate);
+                        
+                    })
+                }validate();
 
                 // $(".form-control").val() === " " || $(".custom-select").val() === " " {
                 // valid = false;
 
                 // }
-                    
-     
-                   
+                                  
                 var newFriend = {
                     name: $("#name").val().trim(),
                     photo:$("#photo").val().trim(),
@@ -186,11 +189,9 @@
                 $.post("/api/friends", newFriend, function (data) {
                     console.log(newFriend);
                     console.log(data);
-                       
-
+                    
                 });
-                 
-
+                
                 //clear form after submission
             $('#name').val("");
             $('#photo').val("");
@@ -204,11 +205,9 @@
             $('#questionEIGHT').val("");
             $('#questionNINE').val("");
 
-            }
-        )
-        
+            })
+
          </script>
-            <!-- <script type="text/javascript" src="server.js"></script> -->
             
         </body>
         </html>
