@@ -2,9 +2,9 @@
 var path = require('path');
 
 var friends = require("../data/friends.js");
-console.log(friends);
+// console.log(friends);
 
-module.exports = function(app){
+module.exports = function(app) {
   
 app.get('/survey', function (req, res) {
   
@@ -12,7 +12,7 @@ app.get('/survey', function (req, res) {
   
   });
 
-  app.get('/home', function (req, res) {
+  app.get('*', function (req, res) {
     res.sendFile(path.join(__dirname + '/../public/home.html'));
   
   });

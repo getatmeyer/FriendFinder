@@ -6,6 +6,7 @@
 
             <!-- link sections -->
             <script src="https://code.jquery.com/jquery.js"></script>
+            <link rel="stylesheet" type="text/css" href="../public/css/style.css">
 
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -16,7 +17,7 @@
         <div class="container">
             <h2>Survey Questions</h2>
             <hr>
-            <h3><strong>About You</strong></h3>
+            <h4><strong>About You</strong></h4>
             <h4>Name</h4>
             <input type="text" id="name" class="form-control" required>
 
@@ -25,7 +26,7 @@
             <hr>
 
             <h3><strong>Question 1</strong></h3>
-            <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+            <h4 class= "question">Your mind is always buzzing with unexplored ideas and plans.</h4>
             <select class="custom-select" id="questionONE" style="width:200px;">
                 <option value></option>
                 <option value="1">1 (Strongley Disagree)</option>
@@ -36,7 +37,7 @@
                 </select>
 
                 <h3><strong>Question 2</strong></h3>
-            <h4>Genereally Speaking, you rely more on your expereince than your imagination.</h4>
+            <h4 class="question">Genereally Speaking, you rely more on your expereince than your imagination.</h4>
             <select class="custom-select" id="questionTWO" style="width:200px;">
                 <option value></option>
                 <option value="1">1 (Strongley Disagree)</option>
@@ -47,7 +48,7 @@
                 </select>
 
                 <h3><strong>Question 3</strong></h3>
-                <h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
+                <h4 class ="question">You find it easy to stay relaxed and focused even when there is some pressure.</h4>
                 <select class="custom-select" id="questionTHREE" style="width:200px;">
                 <option value></option>
                 <option value="1">1 (Strongley Disagree)</option>
@@ -58,7 +59,7 @@
                 </select>
 
                 <h3><strong>Question 4</strong></h3>
-            <h4>You rarley do something just out of sheer curiousity.</h4>
+            <h4 class = "question">You rarley do something just out of sheer curiousity.</h4>
             <select class="custom-select" id="questionFOUR" style="width:200px;">
                 <option value></option>
                 <option value="1">1 (Strongley Disagree)</option>
@@ -69,7 +70,7 @@
                 </select>
 
                 <h3><strong>Question 5</strong></h3>
-            <h4>People can rarley upset you.</h4>
+            <h4 class= "question">People can rarley upset you.</h4>
             <select class="custom-select" id="questionFIVE" style="width:200px;">
                 <option value></option>
                 <option value="1">1 (Strongley Disagree)</option>
@@ -80,7 +81,7 @@
                 </select>
 
                 <h3><strong>Question 6</strong></h3>
-            <h4>It is often difficult for you to relate to other people's feelings.</h4>
+            <h4 class ="question">It is often difficult for you to relate to other people's feelings.</h4>
             <select class="custom-select" id="questionSIX" style="width:200px;">
                 <option value></option>
                 <option value="1">1 (Strongley Disagree)</option>
@@ -91,7 +92,7 @@
                 </select>
 
                 <h3><strong>Question 7</strong></h3>
-            <h4>In a discussion, truth should be more important than people's sensetivites.</h4>
+            <h4 class="question">In a discussion, truth should be more important than people's sensetivites.</h4>
             <select class="custom-select" id="questionSEVEN" style="width:200px;">
                 <option value></option>
                 <option value="1">1 (Strongley Disagree)</option>
@@ -102,7 +103,7 @@
                 </select>
 
                 <h3><strong>Question 8</strong></h3>
-            <h4>Genereally Speaking, you rely more on your expereince than your imagination.</h4>
+            <h4 class="question">Genereally Speaking, you rely more on your expereince than your imagination.</h4>
             <select class="custom-select" id="questionEIGHT" style="width:200px;">
                 <option value></option>
                 <option value="1">1 (Strongley Disagree)</option>
@@ -113,7 +114,7 @@
                 </select>
 
                 <h3><strong>Question 9</strong></h3>
-            <h4>Genereally Speaking, you rely more on your expereince than your imagination.</h4>
+            <h4 class="question">Genereally Speaking, you rely more on your expereince than your imagination.</h4>
             <select class="custom-select" id="questionNINE" style="width:200px;">
                 <option value></option>
                 <option value="1">1 (Strongley Disagree)</option>
@@ -137,16 +138,61 @@
 
                 </footer>
 
-            </div>
+                <!--MATCH MODAL -->
+                <div class="modal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title">Modal title</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <p id="matchName">MatchName</p>
+                          <img id="matchImg" class="img-responsive" src="" alt="portrait">
 
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <!-- <div id="resultsModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog"> -->
+
+                    <!-- MODAL CONTENT -->
+                        <!-- <div class="modal-content">
+
+                           <div class= "modal-header">
+                               <button type="button" class="close" data-dismiss="modal">&times;</button>
+                               <h2 class="modal-title"><strong>Meet Your Best Friend!</strong></h2>
+                               </div>
+
+                               <div class="modal-body">
+                               <h2 id="matchName"></h2>
+                               <img id="matchImg" class="img-responsive" src="" alt="portrait">
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    </div> -->
+                    
             <!-- SUBMIT BUTTON  JavaScript -->
             <script>
 
-            // var currentURL = window.location.origin;
-
+            // $("#submit").on('shown.bs.modal', function () {
+            // $("#submit").trigger('focus')
+// })
             // Capture the form input
             $("#submit").on("click", function() {
                 event.preventDefault();
+                $(".modal").modal("toggle")
 
                 function validate() {
                     var valid = true;
@@ -154,6 +200,7 @@
                     if ($(this).val() === '')
                 valid = false;
                     });
+
                     $('.custom-select').each(function() {
                     if ($(this).val() === '')
                     valid = false;
@@ -183,15 +230,17 @@
                 ]}
                 console.log("NewFriend", newFriend); // PASSED
                 
-
-                // var currentURL = window.location.origin;
-   
                 $.post("/api/friends", newFriend, function (data) {
-                    console.log(newFriend);
-                    console.log(data);
+                    // console.log(newFriend);
+                    // console.log(data);
+                    // console.log(newFriend.res.body)
+                    // console.log("data", data);
                     
+                    $("#matchName").text(data.name);
+                    $("matchImg").attr("src", data.photo);
+                    $("resultModal").modal("toggle");  
                 });
-                
+
                 //clear form after submission
             $('#name').val("");
             $('#photo').val("");
