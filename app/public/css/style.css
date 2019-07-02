@@ -4,8 +4,12 @@ body {
     padding-top: 50px;
     
 }
+.jumbotron {
+    margin-left: 200px;
+    margin-right:200px;
+    
+}
 h4 {
-    color: green;
 }
 
 .question {

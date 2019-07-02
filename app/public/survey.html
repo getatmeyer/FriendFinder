@@ -26,7 +26,7 @@
             <hr>
 
             <h3><strong>Question 1</strong></h3>
-            <h4 class= "question">Your mind is always buzzing with unexplored ideas and plans.</h4>
+            <h3 class= "question">Your mind is always buzzing with unexplored ideas and plans.</h4>
             <select class="custom-select" id="questionONE" style="width:200px;">
                 <option value></option>
                 <option value="1">1 (Strongley Disagree)</option>
@@ -37,7 +37,7 @@
                 </select>
 
                 <h3><strong>Question 2</strong></h3>
-            <h4 class="question">Genereally Speaking, you rely more on your expereince than your imagination.</h4>
+            <h2 class="question">Genereally Speaking, you rely more on your expereince than your imagination.</h4>
             <select class="custom-select" id="questionTWO" style="width:200px;">
                 <option value></option>
                 <option value="1">1 (Strongley Disagree)</option>
@@ -48,7 +48,7 @@
                 </select>
 
                 <h3><strong>Question 3</strong></h3>
-                <h4 class ="question">You find it easy to stay relaxed and focused even when there is some pressure.</h4>
+                <h2 class ="question">You find it easy to stay relaxed and focused even when there is some pressure.</h4>
                 <select class="custom-select" id="questionTHREE" style="width:200px;">
                 <option value></option>
                 <option value="1">1 (Strongley Disagree)</option>
@@ -59,7 +59,7 @@
                 </select>
 
                 <h3><strong>Question 4</strong></h3>
-            <h4 class = "question">You rarley do something just out of sheer curiousity.</h4>
+            <h2 class = "question">You rarley do something just out of sheer curiousity.</h4>
             <select class="custom-select" id="questionFOUR" style="width:200px;">
                 <option value></option>
                 <option value="1">1 (Strongley Disagree)</option>
@@ -70,7 +70,7 @@
                 </select>
 
                 <h3><strong>Question 5</strong></h3>
-            <h4 class= "question">People can rarley upset you.</h4>
+            <h2 class= "question">People can rarley upset you.</h4>
             <select class="custom-select" id="questionFIVE" style="width:200px;">
                 <option value></option>
                 <option value="1">1 (Strongley Disagree)</option>
@@ -81,7 +81,7 @@
                 </select>
 
                 <h3><strong>Question 6</strong></h3>
-            <h4 class ="question">It is often difficult for you to relate to other people's feelings.</h4>
+            <h2 class ="question">It is often difficult for you to relate to other people's feelings.</h4>
             <select class="custom-select" id="questionSIX" style="width:200px;">
                 <option value></option>
                 <option value="1">1 (Strongley Disagree)</option>
@@ -92,7 +92,7 @@
                 </select>
 
                 <h3><strong>Question 7</strong></h3>
-            <h4 class="question">In a discussion, truth should be more important than people's sensetivites.</h4>
+            <h2 class="question">In a discussion, truth should be more important than people's sensetivites.</h4>
             <select class="custom-select" id="questionSEVEN" style="width:200px;">
                 <option value></option>
                 <option value="1">1 (Strongley Disagree)</option>
@@ -103,7 +103,7 @@
                 </select>
 
                 <h3><strong>Question 8</strong></h3>
-            <h4 class="question">Genereally Speaking, you rely more on your expereince than your imagination.</h4>
+            <h2 class="question">Genereally Speaking, you rely more on your expereince than your imagination.</h4>
             <select class="custom-select" id="questionEIGHT" style="width:200px;">
                 <option value></option>
                 <option value="1">1 (Strongley Disagree)</option>
@@ -114,7 +114,7 @@
                 </select>
 
                 <h3><strong>Question 9</strong></h3>
-            <h4 class="question">Genereally Speaking, you rely more on your expereince than your imagination.</h4>
+            <h3 class="question">Genereally Speaking, you rely more on your expereince than your imagination.</h4>
             <select class="custom-select" id="questionNINE" style="width:200px;">
                 <option value></option>
                 <option value="1">1 (Strongley Disagree)</option>
@@ -143,14 +143,16 @@
                     <div class="modal-dialog" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title">Modal title</h5>
+                          <h5 class="modal-title">Meet your best friend!</h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                           </button>
                         </div>
                         <div class="modal-body">
                           <p id="matchName">MatchName</p>
-                          <img id="matchImg" class="img-responsive" src="" alt="portrait">
+                          <!-- <img id="matchImg" class="img-responsive" src="" alt="portrait"> -->
+                          <img id="photoM" class="img-responsive" alt="portrait">
+
 
                         </div>
                         <div class="modal-footer">
@@ -237,7 +239,11 @@
                     // console.log("data", data);
                     
                     $("#matchName").text(data.name);
-                    $("matchImg").attr("src", data.photo);
+                    console.log(data.name + "<--data.name")
+                    // $("matchImg").attr("src", data.photo);
+                    console.log(data.photo + "<--data.photo")
+                    $("#photoM").attr("src", data.photo);
+
                     $("resultModal").modal("toggle");  
                 });
 

@@ -27,6 +27,7 @@ module.exports = function (app) {
 
     for (var i = 0; i < friends.length; i++) {
       // results[i] = parseInt(results) 
+      console.log("i loop "+ i)
 
       var currentFriend = friends[i]
       console.log("currentFriend", currentFriend);
@@ -34,6 +35,7 @@ module.exports = function (app) {
       console.log("target", target);
 
       for (var j = 0; j < currentFriend.score.length; j++) {
+        console.log("j loop "+ j)
         // target += currentFriend.scores[j] + userData.scores[j]
         // console.log(typeof currentFriend.score[j])
         // console.log(typeof userData.score[j])
@@ -55,6 +57,8 @@ module.exports = function (app) {
 
       
     friends.push(userData);
+    console.log(bestFriend.photo + "<--bestFriend.photo")
+
     res.json(bestFriend)
 
 

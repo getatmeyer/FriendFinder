@@ -5,7 +5,7 @@
 var friends = [
     {
         name: "Wendy Crimson",
-        photo: "",
+        photo: "https://vignette3.wikia.nocookie.net/itsalwayssunny/images/0/0a/Charlie_%289%29.jpg",
         score: [
             "4",
             "4",
@@ -20,7 +20,7 @@ var friends = [
     },
    {
        name: "Frankie Ruther",
-       photo: "",
+       photo: "https://vignette3.wikia.nocookie.net/itsalwayssunny/images/0/0a/Charlie_%289%29.jpg",
        score : [
         "1",
         "4",
@@ -36,7 +36,7 @@ var friends = [
     },
     {
         name: "Katie Jackson",
-        photo: "",
+        photo: "https://i0.wp.com/metro.co.uk/wp-content/uploads/2018/12/SEI_45812385-8e0f-e1546246917490.jpg?quality=90&strip=all&zoom=1&resize=540%2C504&ssl=1",
         score : [
          "5",
          "4",
@@ -52,7 +52,7 @@ var friends = [
      },
      {
         name: "Steve Stevenson",
-        photo: "",
+        photo: "http://www.liberaldictionary.com/wp-content/uploads/2018/12/men-1.jpg",
         score : [
          "2",
          "1",
@@ -68,7 +68,7 @@ var friends = [
      },
      {
         name: "Lori Ganger",
-        photo: "",
+        photo: "https://vignette3.wikia.nocookie.net/itsalwayssunny/images/0/0a/Charlie_%289%29.jpg",
         score : [
          "2",
          "5",
@@ -84,7 +84,7 @@ var friends = [
      },
      {
         name: "Greg Rickies",
-        photo: "",
+        photo: "http://www.sclance.com/images/men/Men_620533.png",
         score : [
          "3",
          "2",
@@ -100,7 +100,7 @@ var friends = [
      },
      {
         name: "Ken Young",
-        photo: "",
+        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvLW8QrNLJ1go0nRYslhk-hrsW3RP5BxjLRM3HT9RGPIyBlFaruQ",
         score : [
          "1",
          "2",
@@ -116,26 +116,26 @@ var friends = [
      },
      {
         name: "Barbie Kent",
-        photo: "",
+        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNaIOkFJ32hcgwXO7le6Lmvs6VPdKJSrTa9l0RnqRQfWe6wwwDDQ",
         score : [
-         "4",
-         "1",
          "4",
          "2",
          "3",
          "2",
+         "5",
+         "1",
+         "4",
          "2",
-         "2",
-         "1"
+         "3"
  
         ]
      },
      {
         name: "Jackson Rupert",
-        photo: "",
+        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJnbIShy-C4SacV_GzS_tlxO6QaTdEXQXCl_84BWrS5qHlm6HXGg",
         score : [
          "4",
-         "1",
+         "4",
          "4",
          "2",
          "3",
@@ -148,15 +148,15 @@ var friends = [
      },
      {
         name: "Dennis Litteaur",
-        photo: "",
+        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcnUZyl5gRJbnl7JeSQ7vZDkguvhLJSL6GdunLGdg_aU1wGwzmYw",
         score : [
          "2",
          "1",
+         "1",
+         "4",
          "5",
          "2",
          "1",
-         "4",
-         "4",
          "1",
          "3"
  
@@ -164,7 +164,7 @@ var friends = [
      },
      {
         name: "Nancy Molly",
-        photo: "",
+        photo: "https://www.ebglaw.com/content/uploads/2014/06/Gunzenhauser_N_Main1-default-headshot-photo-1464.jpg",
         score : [
          "5",
          "5",
@@ -180,7 +180,7 @@ var friends = [
      },
      {
         name: "Brianda Borrego",
-        photo: "",
+        photo: "http://media.graytvinc.com/images/Brianda+V+2018.png",
         score : [
          "2",
          "1",
