@@ -9,6 +9,7 @@ var app= express();
 var PORT = process.env.PORT || 8080;
 // console.log(app);
 // console.log(process.env.PORT);
+app.use(express.static(path.join(__dirname, "public")));
 
 // Sets up Exress app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
@@ -17,7 +18,6 @@ app.use(express.json());
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-app.use(express.static(path.join(__dirname, "public")));
 
 // app.use(express.static('public'))
 
