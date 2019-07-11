@@ -1,5 +1,5 @@
 # FriendFinder
-<h1>Friend Finder Application
+<h1>Friend Finder Application</h1>
 <hr>
 <h2>Description</h2>
 <hr>
